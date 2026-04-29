@@ -1,10 +1,15 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'NodeJS'
+    }
+
     stages {
-        stage('Print Hello') {
+        stage('Check Node') {
             steps {
-                echo 'Hello, Jenkins!'
+                bat 'node -v'
+                bat 'npm -v'
             }
         }
 
