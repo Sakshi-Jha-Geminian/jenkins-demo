@@ -10,19 +10,19 @@ pipeline {
 
         stage('Run Script') {
             steps {
-                sh 'node app.js'
+                bat 'node app.js'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'npm test'
+                bat 'npm test'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'npm run build'
+                bat 'npm run build'
             }
         }
     }
